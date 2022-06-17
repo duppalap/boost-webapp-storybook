@@ -7,10 +7,6 @@ export default {
     title: "Form Text Field",
     componet: MText,
 
-
-
-
-
 } as ComponentMeta<typeof MText>;
 
 
