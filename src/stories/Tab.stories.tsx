@@ -15,6 +15,8 @@ export default {
 
 
 const BaseTabTemplate: ComponentStory<typeof Tab> = (args) => (
+   // Not sure if I should add a "handleChange function" like the mui example.
+
     <div> <TabContext value={"SomeValue"}>
         <Tabs value={"Hello"}  aria-label="basic tabs example">
             <Tab label="hello"/>

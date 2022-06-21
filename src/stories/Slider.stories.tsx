@@ -5,7 +5,7 @@ import {Slider} from '@mui/material';
 
 export default {
 
-    title : "Slider/Scroll Bar",
+    title: "Slider/Scroll Bar",
     component: Slider,
 
     argTypes: {
@@ -41,12 +41,17 @@ const DiscreteSliderTemplate: ComponentStory<typeof Slider> = (args) => (
     <Slider {...args} />
 );
 export const Discrete = DiscreteSliderTemplate.bind({});
-let min: Array<number>;
-// eslint-disable-next-line prefer-const
+
 
 Discrete.args = {
+    step: 10,
+    marks: true,
+    min: 10,
+    max: 110
 
-    // Marks prop expects array object not sure how that plays apart in setting the min and max props nesting hasn't worked
+
+
+
 }
 
 
