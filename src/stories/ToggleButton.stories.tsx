@@ -1,28 +1,27 @@
 import React from "react";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
-import {FormControlLabel, FormGroup, Checkbox} from '@mui/material';
+import {ToggleButton, ToggleButtonGroup} from '@mui/material';
+
 
 export default {
 
-    title: "Form Control Label",
-    componet: FormControlLabel,
+    title: "Toggle Button",
+    componet: ToggleButton,
 
-} as ComponentMeta<typeof FormControlLabel>;
+} as ComponentMeta<typeof ToggleButton>;
 
 
-const BaseFormControlTemplate: ComponentStory<typeof FormControlLabel> = (args) => (
+const BaseToggleButtonTemplate: ComponentStory<typeof ToggleButton> = (args) => (
     <div>
-        <FormGroup>
-            <FormControlLabel {...args} control={<Checkbox defaultChecked/>} />
-            <FormControlLabel disabled control={<Checkbox/>} label="Disabled"/>
-        </FormGroup>
+        < ToggleButton value="web">Web</ToggleButton>
+        <ToggleButton value="android">Android</ToggleButton>
+        <ToggleButton value="ios">iOS</ToggleButton>
+
+
     </div>
 
 );
 
-export const Basic = BaseFormControlTemplate.bind({});
+export const Basic = BaseToggleButtonTemplate.bind({});
 
-Basic.args = {
-    label:"Enabled"
-}
-
+Basic.args = {}
