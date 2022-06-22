@@ -11,7 +11,7 @@ export default {
 
 
 const BaseTextTemplate: ComponentStory<typeof MText> = (args) => (
-    <><MText  {...args} /><MText> </MText></>
+    <><MText {...args} /><MText> </MText></>
 
 );
 
