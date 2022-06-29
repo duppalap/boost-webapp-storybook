@@ -5,7 +5,7 @@ import { Checkbox } from '@mui/material';
 
 export default {
 
-    title: "Check Box",
+    title: "Misc/Check Box",
     componet: Checkbox,
 
 } as ComponentMeta<typeof Checkbox>;

@@ -4,7 +4,7 @@ import React from "react";
 import {Alert, Button} from '@mui/material';
 
 export default {
-    title: "Alerts",
+    title: "Misc/Alerts",
     component: Alert,
 
 

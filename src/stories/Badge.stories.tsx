@@ -5,7 +5,7 @@ import MailIcon from '@mui/icons-material/Mail';
 
 export default {
 
-    title: "Badge",
+    title: "Misc/Badge",
     componet: Badge,
 
 } as ComponentMeta<typeof Badge>;

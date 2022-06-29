@@ -7,7 +7,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 export default {
-    title: "Bottom Nav",
+    title: "Button/Bottom Nav",
     component: BottomNavigation,
 
 

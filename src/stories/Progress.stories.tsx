@@ -8,7 +8,7 @@ import {CircularProgress, LinearProgress} from '@mui/material';
 
 export default {
 
-    title: "Progress",
+    title: "Misc/Progress",
     componet: CircularProgress, LinearProgress,
 
 } as ComponentMeta<typeof CircularProgress>;

@@ -5,7 +5,7 @@ import { MBaseButton, MIconButton, MFloatingButton } from "../components";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Material UI/Button",
+  title: "Button/Button",
   component: MBaseButton,
 
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes

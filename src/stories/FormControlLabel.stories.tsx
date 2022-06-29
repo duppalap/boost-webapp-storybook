@@ -5,7 +5,7 @@ import {FormControlLabel, FormGroup, Checkbox} from '@mui/material';
 
 export default {
 
-    title: "Form Control Label",
+    title: "Form/Form Control Label",
     componet: FormControlLabel,
 
 } as ComponentMeta<typeof FormControlLabel>;

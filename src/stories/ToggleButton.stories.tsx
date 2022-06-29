@@ -5,7 +5,7 @@ import {ToggleButton, ToggleButtonGroup} from '@mui/material';
 
 export default {
 
-    title: "Toggle Button",
+    title: "Button/Toggle Button",
     componet: ToggleButton,
 
 } as ComponentMeta<typeof ToggleButton>;
