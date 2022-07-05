@@ -6,7 +6,7 @@ import {Switch,FormGroup,FormControlLabel} from '@mui/material';
 
 export default {
 
-    title: "Switch",
+    title: "Misc/Switch",
     componet: Switch,
 
 } as ComponentMeta<typeof Switch>;

@@ -2,15 +2,19 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import AlarmIcon from "@mui/icons-material/Alarm";
 import React from "react";
 import { MBaseButton, MIconButton, MFloatingButton } from "../components";
+import ListItemButton from '@mui/material/ListItemButton';
+
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: "Button/Button",
   component: MBaseButton,
 
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+
+        // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: "color" },
+       onClick: { action: 'clicked' }
   },
 } as ComponentMeta<typeof MBaseButton>;
 
@@ -53,3 +57,22 @@ Floating.args = {
   variant: "extended",
   size: "medium",
 };
+
+const ListItemButtonTemplate: ComponentStory<typeof ListItemButton> = (
+    args
+) => (
+    <ListItemButton {...args}>
+      <AlarmIcon />
+      Medium
+    </ListItemButton>
+);
+
+export const MListItemButton = ListItemButtonTemplate.bind({});
+MListItemButton.args = {
+  color: "primary",
+  variant: "extended",
+  size: "medium",
+};
+
+
+

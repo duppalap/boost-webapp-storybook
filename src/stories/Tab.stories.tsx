@@ -8,7 +8,7 @@ import { TabContext } from '@mui/lab';
 
 export default {
 
-    title: "Basic Tab",
+    title: "Misc/Basic Tab",
     componet: Tab,
 
 } as ComponentMeta<typeof Tab>;
