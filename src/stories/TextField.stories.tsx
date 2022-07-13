@@ -15,16 +15,27 @@ export default {
 } as ComponentMeta<typeof TextField>;
 
 const BaseTextTemplate: ComponentStory<typeof TextField> = (args) => (
-    <div><TextField id="outlined-basic" label="Outlined" variant="outlined"/>
-        <TextField id="filled-basic" label="Filled" variant="filled"/>
-        <TextField id="standard-basic" label="Standard" variant="standard"/>
+    <div>
+        <TextField {...args} id="standard-basic" />
     </div>
 
 );
 
 export const BaseTextField = BaseTextTemplate.bind({});
 
-BaseTextField.args = {}
+BaseTextField.args = {
+    label: "basic text filled",
+    required: false,
+    type:"text",
+    size:"medium",
+    variant:"standard",
+    sx:{},
+    id:"basic text"
+
+
+}
+
+
 
 
 

@@ -1,24 +1,31 @@
 
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 import React, { useState, useEffect  } from "react";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { MBaseButton, MIconButton, MFloatingButton } from "../components";
 
 import List from '@mui/material/List';
+import { SwipeableDrawer } from '@mui/material';
 import Drawer from '@mui/material/Drawer';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import { Typography } from '@mui/material';
+import { Box } from '@mui/material';
+import SpeedIcon from '@mui/icons-material/Speed';
+import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
+import PublicIcon from '@mui/icons-material/Public';
+
+import ThermostatIcon from '@mui/icons-material/Thermostat';
 
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail'
 
 
 
-import Collapse from '@mui/material/Collapse';
 
-
-const open = true;
 
 
 
@@ -27,154 +34,76 @@ const open = true;
 export default {
 
     title: "Text/Drawer",
-    componet: Drawer,
+    componet: SwipeableDrawer,
 
-} as ComponentMeta<typeof Drawer>;
-
-
-const LeftDrawerTemplate: ComponentStory<typeof Drawer> = (args) => (
-        <Drawer {...args}
-
-            variant="permanent"
-            anchor="left"
-
-        >
-
-
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-        </Drawer>
-
-
-);
-
-export const Basic = LeftDrawerTemplate.bind({});
-
-Basic.args = {
-    label:"Enabled",
-    PaperProps:{
-    sx: {
-        width: 240,
-        flexShrink: 0,
-        color: 'text.secondary',
-        boxSizing: 'border-box',
-
-
-    }},
+} as ComponentMeta<typeof SwipeableDrawer>;
 
 
 
+const LeftNavTemplate: ComponentStory<typeof SwipeableDrawer> = (args) => (
 
-}
-const handleClick = () => {
+    <SwipeableDrawer {...args}
 
-    const [open, setOpen] = useState(false);
-    setOpen((prev) => !prev);
-};
-
-const ListTemplate: ComponentStory<typeof Drawer> = (args) => (
-
-
-            <Drawer {...args}
-
-                variant="permanent"
-                anchor="left"
-            >
-            <ListItem >
-                <ListItemButton >
-                    <ListItemIcon>
-                       <InboxIcon />
-                    </ListItemIcon>
-                    <ListItemText  />
-                </ListItemButton>
-
-            </ListItem>
-            <Collapse in={open} timeout="auto" unmountOnExit>
-                <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                        <ListItem key={text} disablePadding>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                   <InboxIcon></InboxIcon>
-
-                                </ListItemIcon>
-
-                                <ListItemText primary={text} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
-
-            </Collapse>
-            </Drawer>
-
-
-
-);
-
-export const DList = ListTemplate.bind({});
-
-DList.args = {
-}
-
-const LeftNavTemplate: ComponentStory<typeof Drawer> = (args) => (
-    <Drawer {...args}
-
-            variant="permanent"
-            anchor="left"
+                     variant="permanent"
+                     anchor="left"
 
     >
 
-        <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        <List> <Box  sx={{ textTransform: 'capitalize', fontWeight: 'bold', textAlign: 'center', color:'rgba(88, 219, 83)' }}>
+            <Typography variant={'h6'}> Freewire </Typography>
+        </Box>
+            <ListItem>
+            <ListItemButton>
+                <ListItemIcon> <AccountCircleIcon htmlColor={"White"}  fontSize={"large"}/> </ListItemIcon>
+                <ListItemText primary={"Account name"} />
+                    </ListItemButton>
+            </ListItem>
+
+
+
+            {['GENERAL', 'ADMINISTRATION', 'NETWORK MANAGEMENT',].map((text, index) => (
                 <ListItem key={text} disablePadding>
                     <ListItemButton>
-
+                        <ListItemIcon>
+                            {index === 0 ? <SpeedIcon /> : index === 1 ? <SupervisorAccountIcon /> : <PublicIcon/>}
+                        </ListItemIcon>
                         <ListItemText primary={text} />
                     </ListItemButton>
                 </ListItem>
             ))}
         </List>
 
-    </Drawer>
+        <List style={{ marginTop: `auto`, }} >
+            <ListItem sx={{textAlign: 'center'}}>
+                <ListItemText> Need help? </ListItemText>
+            </ListItem>
+            <ListItem sx={{textAlign: 'center'}}>
+                <ListItemText> Have anymore questions? </ListItemText>
+            </ListItem>
+            <ListItem sx={{textAlign: 'center'}}>
+                <ListItemButton sx={{textAlign: 'center', color:'rgba(88, 219, 83)'}}>
+            <ListItemText>Contact</ListItemText>
+                </ListItemButton>
+            </ListItem>
+
+        </List>
+
+    </SwipeableDrawer>
 
 
 );
 
-export const LeftNav = LeftDrawerTemplate.bind({});
+export const LeftNav = LeftNavTemplate.bind({});
 
 LeftNav.args = {
     label:"Enabled",
     PaperProps:{
         sx: {
-            width: 180,
+            width: 350,
             height:1080,
             fontWeight: 'light',
             flexShrink: 0,
-            color: "rgba(88, 219, 83)",
+            color: "rgba(247, 247, 247)",
             boxSizing: 'border-box',
             backgroundColor: "rgba(49, 54, 51)",
             typography: 'body1',

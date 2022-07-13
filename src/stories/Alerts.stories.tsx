@@ -20,7 +20,9 @@ const BaseAlertTemplate: ComponentStory<typeof Alert> = (args) => (
 
 export const Basic = BaseAlertTemplate.bind({});
 
-Basic.args = {};
+Basic.args = {
+    color: "success"
+};
 
 const UndoAlertTemplate: ComponentStory<typeof Alert> = (args) => (
     <div><Alert onClose={() => {
@@ -38,5 +40,7 @@ const UndoAlertTemplate: ComponentStory<typeof Alert> = (args) => (
 );
 export const UndoAlert = UndoAlertTemplate.bind({});
 
-UndoAlert.args = {}
+UndoAlert.args = {
+    color: "success"
+}
 
