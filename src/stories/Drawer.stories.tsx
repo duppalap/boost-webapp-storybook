@@ -81,7 +81,7 @@ Basic.args = {
         flexShrink: 0,
         color: 'text.secondary',
         boxSizing: 'border-box',
-        backgroundColor: "#fcba03",
+
 
     }},
 
@@ -118,8 +118,10 @@ const ListTemplate: ComponentStory<typeof Drawer> = (args) => (
                         <ListItem key={text} disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
-                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                   <InboxIcon></InboxIcon>
+
                                 </ListItemIcon>
+
                                 <ListItemText primary={text} />
                             </ListItemButton>
                         </ListItem>
@@ -168,12 +170,14 @@ LeftNav.args = {
     label:"Enabled",
     PaperProps:{
         sx: {
-            width: 240,
-            height:400,
+            width: 180,
+            height:1080,
+            fontWeight: 'light',
             flexShrink: 0,
             color: "rgba(88, 219, 83)",
             boxSizing: 'border-box',
             backgroundColor: "rgba(49, 54, 51)",
+            typography: 'body1',
 
         }},
 }
