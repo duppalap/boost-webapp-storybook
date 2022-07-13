@@ -49,8 +49,8 @@ const LeftNavTemplate: ComponentStory<typeof SwipeableDrawer> = (args) => (
 
     >
 
-        <List> <Box  sx={{ textTransform: 'capitalize', fontWeight: 'bold', textAlign: 'center', color:'rgba(88, 219, 83)' }}>
-            <Typography variant={'h6'}> Freewire </Typography>
+        <List> <Box  sx={{ textTransform: 'capitalize', fontWeight: 'bold', textAlign: 'center', color:'rgba(120, 245, 151)' }}>
+            <Typography variant={'h4'}> Freewire </Typography>
         </Box>
             <ListItem>
             <ListItemButton>
@@ -81,7 +81,7 @@ const LeftNavTemplate: ComponentStory<typeof SwipeableDrawer> = (args) => (
                 <ListItemText> Have anymore questions? </ListItemText>
             </ListItem>
             <ListItem sx={{textAlign: 'center'}}>
-                <ListItemButton sx={{textAlign: 'center', color:'rgba(88, 219, 83)'}}>
+                <ListItemButton sx={{textAlign: 'center', color:'rgba(120, 245, 151)'}}>
             <ListItemText>Contact</ListItemText>
                 </ListItemButton>
             </ListItem>
@@ -102,6 +102,7 @@ LeftNav.args = {
             width: 350,
             height:1080,
             fontWeight: 'light',
+            fontSize:2,
             flexShrink: 0,
             color: "rgba(247, 247, 247)",
             boxSizing: 'border-box',
