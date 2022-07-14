@@ -45,44 +45,6 @@ const LeftNavTemplate: ComponentStory<typeof SwipeableDrawer> = (args) => (
 
     >
 
-        <List> <Box  sx={{ textTransform: 'capitalize', fontWeight: 'bold', textAlign: 'center', color:'rgba(120, 245, 151)' }}>
-            <Typography variant={'h4'}> Freewire </Typography>
-        </Box>
-            <ListItem>
-            <ListItemButton>
-                <ListItemIcon> <AccountCircleIcon htmlColor={"White"}  fontSize={"large"}/> </ListItemIcon>
-                <ListItemText primary={"Account name"} />
-                    </ListItemButton>
-            </ListItem>
-
-
-
-            {['GENERAL', 'ADMINISTRATION', 'NETWORK MANAGEMENT',].map((text, index) => (
-                <ListItem key={text} disablePadding>
-                    <ListItemButton>
-                        <ListItemIcon>
-                            {index === 0 ? <SpeedIcon /> : index === 1 ? <SupervisorAccountIcon /> : <PublicIcon/>}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItemButton>
-                </ListItem>
-            ))}
-        </List>
-
-        <List style={{ marginTop: `auto`, }} >
-            <ListItem sx={{textAlign: 'center'}}>
-                <ListItemText> Need help? </ListItemText>
-            </ListItem>
-            <ListItem sx={{textAlign: 'center'}}>
-                <ListItemText> Have anymore questions? </ListItemText>
-            </ListItem>
-            <ListItem sx={{textAlign: 'center'}}>
-                <ListItemButton sx={{textAlign: 'center', color:'rgba(120, 245, 151)'}}>
-            <ListItemText>Contact</ListItemText>
-                </ListItemButton>
-            </ListItem>
-
-        </List>
 
     </SwipeableDrawer>
 
