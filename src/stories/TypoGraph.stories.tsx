@@ -23,8 +23,8 @@ export const Basic = BaseToggleButtonTemplate.bind({});
 
 Basic.args = {
 
-        sx: {
+    sx: {
 
 
-        }
+    }
 }
