@@ -18,17 +18,6 @@ const AppBarTemplate: ComponentStory<typeof AppBar> = (args) => (
     <Box sx={{ flexGrow: 1 }}>
         <AppBar {...args}>
             <Toolbar>
-                <IconButton
-                    size="large"
-                    edge="start"
-                    color="inherit"
-                    aria-label="menu"
-                    sx={{ mr: 2 }}
-                >
-                    <MenuIcon />
-                </IconButton>
-
-
             </Toolbar>
         </AppBar>
     </Box>
@@ -37,10 +26,12 @@ const AppBarTemplate: ComponentStory<typeof AppBar> = (args) => (
 export const Basic = AppBarTemplate.bind({});
 
 Basic.args = {
-color: "primary",
 
     position:'absolute',
-    sx:{},
+    sx:{
+        background: 'transparent',
+        htmlColor:"blue",
+    },
 
 
 }
