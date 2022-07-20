@@ -48,10 +48,13 @@ export const ThermoIcon = ThermostatIconTemplate.bind({});
 
 ThermoIcon.args = {
     color:"inherit",
-    fontSize:'medium',
+
     inheritViewBox: false,
-    viewBox: "0 0 0 24 24",
-    htmlColor: "Blue",
+
+    htmlColor: "Black",
+
+    style: {fontSize: 60},
+
 
 }
 
