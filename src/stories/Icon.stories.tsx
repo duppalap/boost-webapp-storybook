@@ -29,13 +29,12 @@ export const AccountCircle = AccountCircleTemplate.bind({});
 
 AccountCircle.args = {
     color:"inherit",
-    fontSize:'medium',
+
     inheritViewBox: false,
 
-    htmlColor: "Blue",
-    size:'large',
-    width: 60,
-    height: 60,
+    htmlColor: "Black",
+
+    style: {fontSize: 60},
 
 }
 const ThermostatIconTemplate: ComponentStory<typeof SvgIcon> = (args ) => (
